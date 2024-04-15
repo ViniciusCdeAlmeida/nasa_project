@@ -24,7 +24,7 @@ class ImageExternalDatasource implements IImageExternalDatasource {
       'api.nasa.gov/planetary/apod',
       queryParameters: queryParams,
     );
-
-    return HomeSalesMapper.fromMap(response.data);
+    return [];
+    // return HomeSalesMapper.fromMap(response.data);
   }
 }
