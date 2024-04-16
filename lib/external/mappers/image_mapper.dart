@@ -2,7 +2,7 @@ import 'package:faker/faker.dart';
 import 'package:nasa_project/domain/entities/image_entity.dart';
 import 'package:nasa_project/domain/enums/media_type_enum.dart';
 
-class ImageMapper {
+final class ImageMapper {
   static ImageEntity fromMap(Map<dynamic, dynamic> map) {
     return ImageEntity(
       author: map['copyright'],
@@ -17,11 +17,11 @@ class ImageMapper {
   static Map<String, dynamic> toMap(ImageEntity image) {
     return {
       'copyright': image.author,
-      'date': image.date,
+      'date': image.date.toString(),
       'explanation': image.explanation,
       'hdurl': image.file,
       'url': image.file,
-      'media_type': image.type,
+      'media_type': image.type.value,
       'title': image.title,
     };
   }

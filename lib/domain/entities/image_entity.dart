@@ -1,12 +1,22 @@
 import 'package:equatable/equatable.dart';
+import 'package:hive/hive.dart';
 import 'package:nasa_project/domain/enums/media_type_enum.dart';
 
+part 'image_entity.g.dart';
+
+@HiveType(typeId: 0)
 final class ImageEntity extends Equatable {
-  final String author;
+  @HiveField(0)
+  final String? author;
+  @HiveField(1)
   final DateTime date;
+  @HiveField(2)
   final String explanation;
+  @HiveField(3)
   final String file;
+  @HiveField(4)
   final MediaTypeEnum type;
+  @HiveField(5)
   final String title;
 
   const ImageEntity({
