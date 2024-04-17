@@ -1,16 +1,41 @@
-# nasa_project
 
-A new Flutter project.
+# APOD project
 
-## Getting Started
+A simple Flutter Application that shows a list of Astronomical Pictures in chronological order fetched from NASA APOD API
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Authors
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [@ViniciusCdeAlmeida](https://www.github.com/ViniciusCdeAlmeida)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Feedback
+
+If anyone wants to send a feedback, please send an email to viniciusc.almeida1@gmail.com or conctact me in linkedin [Vinicius Correa de Almeida](https://www.linkedin.com/in/viniciuscorrea-almeida/).
+
+
+## Rodando localmente
+
+Clone the project
+
+```bash
+  git clone git@github.com:ViniciusCdeAlmeida/nasa_project.git
+```
+
+Run pub get
+
+```bash
+  flutter pub get
+```
+
+Run the project
+
+```bash
+  flutter run
+``` 
+
+
+## Screenshots
+
+
+
