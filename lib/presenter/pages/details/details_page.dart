@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:nasa_project/domain/entities/image_entity.dart';
 import 'package:nasa_project/presenter/controllers/app_controller.dart';
@@ -20,10 +21,10 @@ class _DetailPageState extends AppController<DetailPage, DetailsBloc> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Expanded(
-          child: Text(
-            widget.image.title,
-          ),
+        title: Text(
+          widget.image.title,
+          softWrap: true,
+          maxLines: null,
         ),
       ),
       body: CustomScrollView(
@@ -31,17 +32,15 @@ class _DetailPageState extends AppController<DetailPage, DetailsBloc> {
           SliverList(
             delegate: SliverChildListDelegate([
               ClipRRect(
-                borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.circular(15.0),
-                  bottomRight: Radius.circular(15.0),
-                ),
-                child: Image.network(
-                  widget.image.file,
-                  height: 500,
-                  width: 500,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(15.0),
+                    bottomRight: Radius.circular(15.0),
+                  ),
+                  child: CachedNetworkImage(
+                    imageUrl: widget.image.file,
+                    height: 500,
+                    width: 500,
+                  )),
               Card(
                 elevation: 7,
                 shape: RoundedRectangleBorder(

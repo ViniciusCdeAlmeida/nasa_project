@@ -22,6 +22,12 @@ class _SavedPageState extends AppController<SavedPage, SavedBloc> {
       bottomNavigationBar: const CustomBottomNavigationBar(
         position: 1,
       ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text('Saved images'),
+        centerTitle: true,
+        backgroundColor: Colors.grey.shade300,
+      ),
       body: CustomScrollView(
         slivers: [
           SliverFillRemaining(

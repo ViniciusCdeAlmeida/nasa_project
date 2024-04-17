@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:intl/intl.dart';
@@ -34,10 +35,10 @@ class ImageItemWidget extends StatelessWidget {
                         ),
                         child: image.type == MediaTypeEnum.video
                             ? const Text('No image')
-                            : Image.network(
-                                image.file,
-                                height: 100,
-                                width: 100,
+                            : CachedNetworkImage(
+                                imageUrl: image.file,
+                                height: 500,
+                                width: 320,
                                 fit: BoxFit.cover,
                               ),
                       ),

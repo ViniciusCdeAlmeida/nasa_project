@@ -46,7 +46,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 label: 'Saved',
                 icon: Padding(
                   padding: EdgeInsets.all(1.0),
-                  child: Icon(Icons.abc),
+                  child: Icon(Icons.save),
                 ),
               ),
             ],

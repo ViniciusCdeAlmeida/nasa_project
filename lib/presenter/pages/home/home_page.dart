@@ -23,6 +23,12 @@ class _HomePageState extends AppController<HomePage, HomeBloc> {
       bottomNavigationBar: const CustomBottomNavigationBar(
         position: 1,
       ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text('Search images'),
+        centerTitle: true,
+        backgroundColor: Colors.grey.shade300,
+      ),
       body: CustomScrollView(
         slivers: [
           SliverFillRemaining(
